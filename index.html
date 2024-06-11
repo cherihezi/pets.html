@@ -86,7 +86,7 @@ div {
             /* if you want something (like the header) to be Wider than
     the other elements, you will need to move that div outside
     of the container */
-            #container {
+            container {
                 max-width: 900px;
                 /* this is the width of your layout! */
                 /* if you change the above value, scroll to the bottom
@@ -97,7 +97,7 @@ div {
 
             /* the area below is for all links on your page
     EXCEPT for the navigation */
-            #container a {
+            container a {
                 color: #959D90;
                 font-weight: bold;
                 /* if you want to remove the underline
@@ -118,14 +118,14 @@ div {
             }
 
             /* navigation section!! */
-            #navbar {
+            navbar {
                 height: 40px;
                 background-color: #13092D;
                 /* navbar color */
                 width: 100%;
             }
 
-            #navbar ul {
+            navbar ul {
                 display: flex;
                 padding: 0;
                 margin: 0;
@@ -133,12 +133,12 @@ div {
                 justify-content: space-evenly;
             }
 
-            #navbar li {
+            navbar li {
                 padding-top: 10px;
             }
 
             /* navigation links*/
-            #navbar li a {
+            navbar li a {
                 color: #ED64F5;
                 /* navbar text color */
                 font-weight: 800;
@@ -147,12 +147,12 @@ div {
             }
 
             /* navigation link when a link is hovered over */
-            #navbar li a:hover {
+            navbar li a:hover {
                 color: #a49cba;
                 text-decoration: underline;
             }
 
-            #flex {
+            flex {
                 display: flex;
             }
 
@@ -225,7 +225,7 @@ div {
 
             /* CSS for extras */
 
-            #topBar {
+            topBar {
                 width: 100%;
                 height: 30px;
                 padding: 10px;
@@ -244,7 +244,7 @@ div {
     */
 
             @media only screen and (max-width: 800px) {
-                #flex {
+                flex {
                     flex-wrap: wrap;
                 }
 
