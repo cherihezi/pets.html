@@ -1,340 +1,169 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-body{
-div {
-  background-image: url("https://sadhost.neocities.org/images/tiles/cateyes.gif");
-  
-
-
-        <!-- THIS IS THE CSS !-->
-        <style>
-            /* user styles */
-
-            /* styles are what change the color and sizes of stuff on your site. */
-
-            /* these are variables that are being used in the code
-    these tended to confuse some people, so I only kept 
-    the images as variables */
-
-            :root {
-                --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
-                --body-bg-image: url('https://sadhost.neocities.org/images/tiles/cateyes.gif');
-
-                /* colors */
-                --content: #43256E;
-            }
-
-            /* if you have the URL of a font, you can set it below */
-            /* feel free to delete this if it's not your vibe */
-
-            /* this seems like a lot for just one font and I would have to agree 
-    but I wanted to include an example of how to include a custom font.
-    If you download a font file you can upload it onto your Neocities
-    and then link it! Many fonts have separate files for each style
-    (bold, italic, etc. T_T) which is why there are so many!
+  <head>
+    <meta charset="UTF-8">
+    <title>eggramen | test2</title>
+    <!-- if you can read this you can read. -->
+    <link href="softpink.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <h1>Pink CSS Test Page!</h1>
+    <h2>It's Also a Demo I Guess</h2>
     
-    */
+    <div class=box>
+        
+    <p>Not changing much of the default text, sorry.</p>
 
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
-            }
+    <p>This is a paragraph! Here's how you make a link: <a href="https://neocities.org">Neocities</a>.</p>
 
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
-                font-weight: bold;
-            }
+    <p>Here's how you can make <strong>bold</strong> and <em>italic</em> text.</p>
 
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
-                font-style: italic;
-            }
+    <p>Here's how you can add an image:</p>
+    <img src="/neocities.png">
 
-            @font-face {
-                font-family: Nunito;
-                src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
-                font-style: italic;
-                font-weight: bold;
-            }
+    <p>Here's how to make a list:</p>
 
-            body {
-                font-family: 'Nunito', sans-serif;
-                margin: 0;
-                background-color: #223030;
-                /* you can delete the line below if you'd prefer to not use an image */
-                background-size: 65px;
-                color: #fceaff;
-                background-image: url("https://sadhost.neocities.org/images/tiles/cateyes.gif");
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            /* below this line is CSS for the layout */
-
-            /* this is a CSS comment
-    to uncomment a line of CSS, remove the * and the /
-    before and after the text */
-
-
-            /* the "container" is what wraps your entire website */
-            /* if you want something (like the header) to be Wider than
-    the other elements, you will need to move that div outside
-    of the container */
-            container {
-                max-width: 900px;
-                /* this is the width of your layout! */
-                /* if you change the above value, scroll to the bottom
-      and change the media query according to the comment! */
-                margin: 0 auto;
-                /* this centers the entire page */
-            }
-
-            /* the area below is for all links on your page
-    EXCEPT for the navigation */
-            container a {
-                color: #959D90;
-                font-weight: bold;
-                /* if you want to remove the underline
-      you can add a line below here that says:
-      text-decoration:none; */
-            }
-
-            #header {
-                width: 100%;
-                background-color: #5e4e8c;
-                /* header color here! */
-                height: 150px;
-                /* this is only for a background image! */
-                /* if you want to put images IN the header, 
-      you can add them directly to the <div id="header"></div> element! */
-                background-image: var(--header-image);
-                background-size: 100%;
-            }
-
-            /* navigation section!! */
-            navbar {
-                height: 40px;
-                background-color: #13092D;
-                /* navbar color */
-                width: 100%;
-            }
-
-            navbar ul {
-                display: flex;
-                padding: 0;
-                margin: 0;
-                list-style-type: none;
-                justify-content: space-evenly;
-            }
-
-            navbar li {
-                padding-top: 10px;
-            }
-
-            /* navigation links*/
-            navbar li a {
-                color: #ED64F5;
-                /* navbar text color */
-                font-weight: 800;
-                text-decoration: none;
-                /* this removes the underline */
-            }
-
-            /* navigation link when a link is hovered over */
-            navbar li a:hover {
-                color: #a49cba;
-                text-decoration: underline;
-            }
-
-            flex {
-                display: flex;
-            }
-
-            /* this colors BOTH sidebars
-    if you want to style them separately,
-    create styles for #leftSidebar and #rightSidebar */
-            aside {
-                background-color: #241445;
-                width: 200px;
-                padding: 20px;
-                font-size: smaller;
-                /* this makes the sidebar text slightly smaller */
-            }
-
-
-            /* this is the color of the main content area,
-    between the sidebars! */
-            main {
-                background-color: 223030;
-                flex: 1;
-                padding: 20px;
-                order: 2;
-            }
-
-            /* what's this "order" stuff about??
-    allow me to explain!
-    if you're using both sidebars, the "order" value
-    tells the CSS the order in which to display them.
-    left sidebar is 1, content is 2, and right sidebar is 3! */
-
-            */ #leftSidebar {
-                order: 1;
-            }
-
-            #rightSidebar {
-                order: 3;
-            }
-
-            footer {
-                background-color: #13092D;
-                /* background color for footer */
-                width: 100%;
-                height: 40px;
-                padding: 10px;
-                text-align: center;
-                /* this centers the footer text */
-            }
-
-            h1,
-            h2,
-            h3 {
-                color: #959D90;
-            }
-
-            h1 {
-                font-size: 25px;
-            }
-
-            strong {
-                /* this styles bold text */
-                color: #E8D9CD;
-            }
-
-            /* this is just a cool box, it's the darker colored one */
-            .box {
-                background-color: #13092D;
-                border: 1px solid #ED64F5;
-                padding: 10px;
-            }
-
-            /* CSS for extras */
-
-            topBar {
-                width: 100%;
-                height: 30px;
-                padding: 10px;
-                font-size: smaller;
-                background-color: #13092D;
-            }
-
-
-            /* BELOW THIS POINT IS MEDIA QUERY */
-
-            /* so you wanna change the width of your page? 
-    by default, the container width is 900px.
-    in order to keep things responsive, take your new height,
-    and then subtrack it by 100. use this new number as the 
-    "max-width" value below
-    */
-
-            @media only screen and (max-width: 800px) {
-                flex {
-                    flex-wrap: wrap;
-                }
-
-                aside {
-                    width: 100%;
-                }
-
-                /* the order of the items is adjusted here for responsiveness!
-      since the sidebars would be too small on a mobile device.
-      feel free to play around with the order!
-      */
-                main {
-                    order: 1;
-                }
-
-                #leftSidebar {
-                    order: 2;
-                }
-
-                #rightSidebar {
-                    order: 3;
-                }
-
-                #navbar ul {
-                    flex-wrap: wrap;
-                }
-            }
-	</style>
-	
-	<title>Our Pets!</title>
-
-<div id="container">
-            <div id="headerArea">
-                
-                
-            </div>
-
-            <div id="flex">
-                
-                <main>
-                    <span id="bubble">Our pets!</span>
-                    <p><strong>(Some pets we have are mostly cats, we did had baby chicks, pet fishes and dogs but time flies.)</strong></p>
-                     
-        <h2>Kitcat</h2>
-        <p>Is a male cat and would like to tolerate me and my lil' brother. His left eye turned pink because my mom washed him at the sink.
-		He likes to have sunbaths pretty much and likes going under our cars... which isn't safe. 
-		Sadly, he ran away from other stray cats... -_-</p>
-      
-      
-        <h2>Milko</h2>
-          <p>Is a female cat and she has white and brown-blackish fur and her fur looks like spilled milk
-		  so I called her "Milko." She would get energetic and run around the house when no ones here. 
-		  She loves to play with strings and puffballs which is one of her favorite toys but those would
-		  end up being damaged quickly, especially the puffballs. Besides that, she doesn't really get on tables like Kitcat
-		  did. She was a well-behaved cat, and would live in the laundry room. I did want to change catfoods for her but my mom keeps
-		  buying the same ol' cat food. I wish I told her about changing catfoods at any time because it is vital for cats
-		  to try different catfoods that I just heard long ago. </p>
-        <h2>Pumper</h2>
-	<img src="Pumper.png" style="height: 200px;">
-        <p>Pumper is my big sis's female cat! She has a lot of silly names that ends with Pumper and wears costumes, even though cats get really
-		uncomfortable with it which how heavy it is.</p>
-      
-	   
-        <h2>Bugs</h2>
-        <p>A bit ugly, but a sweet gray cat which is my other big sis had.</p>
-     
-        <h2>Mama D</h2>
-        <p>My big sis's deceased cat. I think we buried Mama D on the ground somewhere... RIP.（；へ：）</p>
-      
-	   <h2>Ginger</h2>
-        <p>Deceased ginger kitten who probably died from my big sis's freezing home.</p>
-      
-	   <h2>Felix</h2>
-        <p>Loose black and white cat from a very long time ago, ran away because of my dad.</p>
-      
-	   <h2>Camila</h2>
-        <p>Female chihuahua and is clingy to our grandma but is a friendly dog but is afraid of fireworks.</p>
-
-
-	<style>
-
-
-                </main>
-                
-            </div>
-            
-        </div>
-
-
-
-
-</body>
+    <ul>
+      <li>First thing</li>
+      <li>Second thing</li>
+      <li>Third thing</li>
+    </ul>
+    <p>Centering makes list look weird, though.</p>
+    <p><small>Here is a custom text style, written as &lt;small&gt;&lt;/small&gt;.</small></p>
+    <p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
+    <br/>
+    <p>Here's some more text, which should go all the way to the line break and continue in a longer paragraph. This is probably the most text on the page, heh. It just sort of keeps going and going. Wheee!</p>
+    <p>Wow, I just need a little more content to make it to the bottom of the page! And then it'll start scrolling and stuff.</p>
+    <p>Neat!</p>
+    <p>...</p>
+    <p>Hmmm... Images are a good way to fill up space... but bluhh I only have 10 mb of space to put stuff in, so I shouldn't waste it on this. Plaintext will do just fine.</p>
+    <p>Well, I think I've written enough! That's good.</p>
+    <p>Unless I want to write something more here, like a story... Hard to say what to write about, though...</p>
+    <p>Meh.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h2>Here's a lesser header. It stays inside the box, but has its own, smaller, <strike>smugger</strike> box, see?</h2>
+    <p>And here's some stuff after it.</p>
+    <h3>Including a lesser header that has no bubble.</h3>
+    <p>However, there's also...</p>
+    <h1>A proper bubble header! but within the main header I guess</h1>
+    <p>I wonder if I should give custom stuff to other smaller headers, too.</p>
+    <p>Will need to change the h1 code to have percentage margins, though.</p>
+    <h1>Okay, that's much better.</h1>
+    <p>Now for a header outside our box...</p>
+    </div>
+    <h1>Big headers!</h1>
+    <h2>Smaller headers!</h2>
+    <h5>a subtitle lol</h5>
+    <div class=box>
+    <p>And back in the box we go!</p>
+    <br/>    
+    <p><a href="/testdirectory.html">go back</a></p>
+    
+    </div>
+        
+    <br/>
+    <center><small>This site is hosted by</small><br/><img src="/neo.gif"></center>
+  </body>
 </html>
+
+
+
+<style>
+
+body {
+  background: url(https://eggramen.neocities.org/cinnamonbird_cairoovercoat_roxy2alt.png);
+  color: #860000;
+  font-family: "Consolas", monospace;
+  /*text-align:center;*/
+  
+  
+  }
+  
+  a {
+    color: #cc0000
+    }
+    
+  small {
+    font-size:10pt;
+    }
+    
+  .box {
+    border: 4px solid #ff75a8;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 30px;
+    background-color:#ffddee;
+    
+    }
+    
+  .box-narrow {
+    border: 4px solid #ff75a8;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 30px;
+    background-color:#ffddee;
+    
+    }
+    
+  .box-narrowest {
+    border: 4px solid #ff75a8;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 30px;
+    background-color:#ffddee;
+    
+    }
+    
+    h1 {
+    text-align: center;
+    border: 4px solid #ff75a8;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    border-radius: 30px;
+    background-color:#ffddee
+      }
+      
+    h2 {
+    text-align: center;
+    border: 3px solid #ff75a8;
+    margin-left: 22%;
+    margin-right: 22%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    border-radius: 30px;
+    background-color:#ffddee
+      }
+      
+    h4 {
+      text-align: center;
+      }
+      
+    h5 {
+      text-align: center;
+      }
+      
+    center {
+      text-align: center;
+      }
+
+</style>
